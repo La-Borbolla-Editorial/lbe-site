@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 600" role="img" aria-labelledby="title desc">
+  <title id="title">The Innocence of Father Brown cover placeholder</title>
+  <desc id="desc">A grey placeholder book cover.</desc>
+  <rect width="400" height="600" fill="#d2cbc3"/>
+  <rect x="28" y="28" width="344" height="544" fill="none" stroke="#746a63" stroke-width="2" opacity="0.55"/>
+  <text x="200" y="270" text-anchor="middle" font-family="Georgia, serif" font-size="34" fill="#554c46" opacity="0.72">THE INNOCENCE</text>
+  <text x="200" y="313" text-anchor="middle" font-family="Georgia, serif" font-size="34" fill="#554c46" opacity="0.72">OF FATHER BROWN</text>
+  <text x="200" y="380" text-anchor="middle" font-family="Georgia, serif" font-size="22" fill="#554c46" opacity="0.55">G. K. CHESTERTON</text>
+</svg>

@@ -1,0 +1,456 @@
+:root {
+  --paper: #efe2d5;
+  --paper-deep: #e5cfba;
+  --ink: #020112;
+  --muted-ink: #5d514d;
+  --red: #8d022e;
+  --red-dark: #5f001d;
+  --hairline: rgba(2, 1, 18, 0.22);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  background: var(--paper);
+}
+
+body {
+  min-height: 100%;
+  margin: 0;
+  color: var(--ink);
+  background: var(--paper);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 18px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.42;
+  background-image:
+    linear-gradient(rgba(2, 1, 18, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(2, 1, 18, 0.025) 1px, transparent 1px);
+  background-size: 7px 7px, 11px 11px;
+  mix-blend-mode: multiply;
+}
+
+.page {
+  width: min(100%, 840px);
+  margin: 0 auto;
+  padding: clamp(14px, 3.4vw, 38px);
+}
+
+.colophon-card {
+  position: relative;
+  max-width: 630px;
+  margin: 0 auto;
+  padding: clamp(30px, 5.2vw, 58px) clamp(24px, 5.2vw, 54px);
+  background:
+    linear-gradient(rgba(239, 226, 213, 0.96), rgba(239, 226, 213, 0.96)),
+    repeating-linear-gradient(0deg, transparent 0, transparent 35px, rgba(141, 2, 46, 0.035) 36px);
+  border: 1px solid var(--hairline);
+}
+
+.colophon-card::before,
+.colophon-card::after {
+  content: "";
+  position: absolute;
+  inset: 13px;
+  border: 1px solid rgba(141, 2, 46, 0.32);
+  pointer-events: none;
+}
+
+.colophon-card::after {
+  inset: 19px;
+  border-color: rgba(2, 1, 18, 0.12);
+}
+
+.masthead,
+.statement,
+.actions,
+footer {
+  text-align: center;
+}
+
+.eyebrow,
+h2,
+dt,
+.sig {
+  font-family: "IM Fell English", Georgia, serif;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.eyebrow {
+  margin: 0 0 15px;
+  color: var(--red);
+  font-size: 0.68rem;
+}
+
+.printer-mark {
+  display: block;
+  width: clamp(58px, 10vw, 82px);
+  height: auto;
+  margin: 0 auto 18px;
+  mix-blend-mode: multiply;
+}
+
+h1 {
+  max-width: 13ch;
+  margin: 0 auto;
+  font-size: clamp(1.85rem, 4.6vw, 3.25rem);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.025em;
+}
+
+.subtitle {
+  max-width: 22rem;
+  margin: 17px auto 0;
+  color: var(--muted-ink);
+  font-size: clamp(0.98rem, 2vw, 1.18rem);
+  font-style: italic;
+  line-height: 1.25;
+}
+
+.rule {
+  width: min(100%, 14rem);
+  height: 0;
+  margin: clamp(24px, 4.2vw, 38px) auto;
+  border-top: 1px solid rgba(95, 0, 29, 0.55);
+}
+
+.rule::before {
+  content: "";
+  display: block;
+  width: 2.35rem;
+  margin: -1px auto 0;
+  border-top: 1px solid rgba(95, 0, 29, 0.55);
+}
+
+h2 {
+  margin: 0 0 15px;
+  color: var(--red-dark);
+  font-size: 0.78rem;
+  font-weight: 400;
+}
+
+.statement p {
+  max-width: 28rem;
+  margin: 0 auto;
+  font-size: clamp(0.98rem, 1.8vw, 1.1rem);
+}
+
+.details {
+  display: grid;
+  gap: 0;
+  margin: clamp(38px, 7vw, 66px) 0;
+  border-top: 1px solid var(--hairline);
+  border-bottom: 1px solid var(--hairline);
+}
+
+.details div {
+  display: grid;
+  grid-template-columns: minmax(8.5rem, 0.8fr) 1.6fr;
+  gap: 24px;
+  padding: 17px 0;
+  border-top: 1px solid rgba(2, 1, 18, 0.1);
+}
+
+.details div:first-child {
+  border-top: 0;
+}
+
+dt {
+  color: var(--red-dark);
+  font-size: 0.68rem;
+}
+
+dd {
+  margin: 0;
+  color: var(--ink);
+  font-size: 1.1rem;
+  line-height: 1.35;
+}
+
+a {
+  color: var(--red);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+  transition: color 160ms ease, opacity 160ms ease;
+}
+
+a:hover,
+a:focus-visible {
+  color: var(--red-dark);
+  opacity: 0.72;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin: clamp(26px, 4.2vw, 34px) 0 28px;
+}
+
+.actions a {
+  min-width: 132px;
+  padding: 8px 13px 9px;
+  border: 1px solid rgba(141, 2, 46, 0.45);
+  color: var(--red-dark);
+  font-family: "IM Fell English", Georgia, serif;
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.actions a:hover,
+.actions a:focus-visible {
+  background: rgba(141, 2, 46, 0.08);
+  opacity: 1;
+}
+
+footer {
+  color: var(--muted-ink);
+  font-size: 0.9rem;
+}
+
+footer p {
+  margin: 0;
+}
+
+.sig {
+  margin-top: 8px;
+  color: var(--red-dark);
+  font-size: 0.68rem;
+}
+
+.catalog-card {
+  max-width: 780px;
+}
+
+.catalog-masthead h1 {
+  max-width: none;
+}
+
+.book-list {
+  display: grid;
+  gap: clamp(24px, 4vw, 36px);
+  margin: clamp(30px, 5vw, 46px) 0;
+}
+
+.book-entry {
+  display: grid;
+  grid-template-columns: minmax(58px, 78px) 1fr;
+  gap: clamp(14px, 2.6vw, 22px);
+  align-items: center;
+  padding-bottom: clamp(24px, 4vw, 36px);
+  border-bottom: 1px solid var(--hairline);
+  color: inherit;
+  opacity: 0;
+  text-decoration: none;
+  transform: translateY(4px);
+  transition: opacity 280ms ease, transform 280ms ease;
+}
+
+.book-entry:hover,
+.book-entry:focus-visible {
+  color: inherit;
+  opacity: 0.82;
+}
+
+.catalog-list-settled .book-entry {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.book-entry:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.book-cover {
+  aspect-ratio: 2 / 3;
+  width: 100%;
+  max-width: 78px;
+  background: #d2cbc3;
+  border: 1px solid rgba(2, 1, 18, 0.28);
+  display: block;
+  object-fit: cover;
+}
+
+.book-copy {
+  min-width: 0;
+}
+
+.book-kicker {
+  margin: 0 0 10px;
+  color: var(--red-dark);
+  font-family: "IM Fell English", Georgia, serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.book-copy h2 {
+  margin: 0;
+  color: var(--ink);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(1.55rem, 3.7vw, 2.25rem);
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  line-height: 0.98;
+  text-transform: none;
+}
+
+.book-authors {
+  margin: 10px 0 0;
+  font-size: clamp(1.02rem, 2vw, 1.22rem);
+  line-height: 1.25;
+}
+
+.book-contributors {
+  margin: 5px 0 0;
+  color: var(--muted-ink);
+  font-size: 0.84rem;
+  font-style: italic;
+  line-height: 1.35;
+  opacity: 0.72;
+}
+
+.forthcoming .book-cover,
+.forthcoming .book-copy {
+  opacity: 0.68;
+}
+
+.catalog-loading {
+  margin: 0;
+  color: var(--muted-ink);
+  font-size: 1rem;
+  text-align: center;
+}
+
+.catalog-tags {
+  margin: clamp(28px, 5vw, 44px) 0 clamp(16px, 3vw, 28px);
+  padding-top: clamp(22px, 4vw, 34px);
+  border-top: 1px solid var(--hairline);
+  text-align: center;
+}
+
+.catalog-tags h2 {
+  margin-bottom: 14px;
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 9px;
+}
+
+.tag-button {
+  appearance: none;
+  border: 1px solid rgba(141, 2, 46, 0.38);
+  border-radius: 999px;
+  padding: 7px 13px 8px;
+  background: transparent;
+  color: var(--red-dark);
+  cursor: pointer;
+  font-family: "IM Fell English", Georgia, serif;
+  font-size: 0.68rem;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  transform: translateY(0);
+  transition:
+    background-color 220ms ease,
+    border-color 220ms ease,
+    color 220ms ease,
+    opacity 220ms ease,
+    transform 220ms ease;
+}
+
+.tag-button:hover,
+.tag-button:focus-visible,
+.tag-button.active {
+  background: rgba(141, 2, 46, 0.08);
+  color: var(--ink);
+  transform: translateY(-1px);
+}
+
+.tag-button.active {
+  border-color: var(--red-dark);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .book-entry,
+  .tag-button {
+    transition: none;
+  }
+
+  .book-entry,
+  .catalog-list-settled .book-entry,
+  .tag-button,
+  .tag-button:hover,
+  .tag-button:focus-visible,
+  .tag-button.active {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+::selection {
+  background: var(--red);
+  color: var(--paper);
+}
+
+@media (max-width: 620px) {
+  body {
+    font-size: 17px;
+  }
+
+  .page {
+    padding: 10px;
+  }
+
+  .colophon-card {
+    padding: 36px 21px;
+  }
+
+  .colophon-card::before {
+    inset: 9px;
+  }
+
+  .colophon-card::after {
+    inset: 14px;
+  }
+
+  .details div {
+    grid-template-columns: 1fr;
+    gap: 6px;
+    text-align: center;
+  }
+
+  h1 {
+    max-width: 11ch;
+  }
+
+  .book-entry {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .book-cover {
+    max-width: 74px;
+  }
+}

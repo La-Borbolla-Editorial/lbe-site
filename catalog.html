@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>La Borbolla Editorial — Catalog</title>
+  <meta name="description" content="Catalog of books from La Borbolla Editorial.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="catalog.js" defer></script>
+</head>
+<body>
+  <main class="page catalog-page" aria-label="La Borbolla Editorial catalog">
+    <section class="colophon-card catalog-card">
+      <header class="masthead catalog-masthead">
+        <p class="eyebrow">Ediciones La Borbolla</p>
+        <h1>Catalog</h1>
+        <p class="subtitle">Books in print and in preparation.</p>
+      </header>
+
+      <div class="rule" aria-hidden="true"></div>
+
+      <section id="catalog-list" class="book-list" aria-label="Books">
+        <p class="catalog-loading">Loading catalog…</p>
+        <noscript>
+          <p class="catalog-loading">Enable JavaScript to render the catalog from catalog.csv.</p>
+        </noscript>
+      </section>
+
+      <section class="catalog-tags" aria-labelledby="catalog-tags-title">
+        <h2 id="catalog-tags-title">Sort by tag</h2>
+        <div id="category-tags" class="tag-list" aria-label="Catalog category filters"></div>
+      </section>
+
+      <nav class="actions" aria-label="Site links">
+        <a href="index.html">Back to colophon</a>
+        <a href="mailto:hello@laborbolla.com">Write to the press</a>
+      </nav>
+
+      <footer>
+        <p class="sig">La Borbolla · Catalog</p>
+      </footer>
+    </section>
+  </main>
+</body>
+</html>
