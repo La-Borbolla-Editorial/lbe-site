@@ -34,11 +34,11 @@ body::before {
   position: fixed;
   inset: 0;
   pointer-events: none;
-  opacity: 0.42;
+  opacity: 0.50;
   background-image:
-    linear-gradient(rgba(2, 1, 18, 0.035) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(2, 1, 18, 0.025) 1px, transparent 1px);
-  background-size: 7px 7px, 11px 11px;
+    linear-gradient(rgba(2, 1, 18, 0.030) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(2, 1, 18, 0.020) 1px, transparent 1px);
+  background-size: 11px 11px, 22px 22px;
   mix-blend-mode: multiply;
 }
 
