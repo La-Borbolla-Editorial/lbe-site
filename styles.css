@@ -132,7 +132,7 @@ body::before {
 
 .colophon-card {
   position: relative;
-  max-width: 630px;
+  max-width: 780px;
   margin: 0 auto;
   padding: clamp(30px, 5.2vw, 58px) clamp(24px, 5.2vw, 54px);
   background:
@@ -318,10 +318,6 @@ footer p {
   margin-top: 8px;
   color: var(--red-dark);
   font-size: 0.78rem;
-}
-
-.catalog-card {
-  max-width: 780px;
 }
 
 .catalog-masthead h1 {
