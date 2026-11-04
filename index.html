@@ -4,16 +4,25 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>La Borbolla Editorial</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
+  <meta name="description" content="Classic works, carefully made, meant above all to be read. Accessible, carefully typeset editions of great classics.">
+  <meta name="theme-color" content="#efe2d5">
+  <link rel="canonical" href="https://la-borbolla-editorial.github.io/lbe-site/">
+  <link rel="icon" type="image/png" href="assets/mark.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="La Borbolla Editorial">
+  <meta property="og:title" content="La Borbolla Editorial">
+  <meta property="og:description" content="Classic works, carefully made, meant above all to be read. Accessible, carefully typeset editions of great classics.">
+  <meta property="og:url" content="https://la-borbolla-editorial.github.io/lbe-site/">
+  <meta property="og:image" content="https://la-borbolla-editorial.github.io/lbe-site/assets/mark.png">
+  <meta name="twitter:card" content="summary">
+  <link rel="preload" href="assets/fonts/CormorantGaramond-normal-400-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <main class="page" aria-label="La Borbolla Editorial colophon">
     <section class="colophon-card">
       <header class="masthead">
-        <img class="printer-mark" src="assets/mark.png" alt="La Borbolla printer's mark">
+        <img class="printer-mark" src="assets/mark.png" alt="La Borbolla printer's mark" width="1638" height="858">
         <h1>La Borbolla Editorial</h1>
         <p class="subtitle">Classic works, carefully made, meant above all to be read.</p>
       </header>
@@ -23,38 +32,24 @@
       <section class="statement" aria-labelledby="statement-title">
         <h2 id="statement-title">Colophon</h2>
         <p>
-          <em>La Borbolla Editorial</em> aims to bring into print great classic works and other inspired by them, in accesible but carefully designed and typeset editions mean, above all, to be read for both enjoyment and nourishment.
+          <em>La Borbolla Editorial</em> aims to bring into print great classic works, and others inspired by them, in accessible but carefully designed and typeset editions meant, above all, to be read for both enjoyment and nourishment.
         </p>
       </section>
 
-      <!-- Publication details table hidden for now.
-      <dl class="details" aria-label="Publication details">
-        <div>
-          <dt>Publisher</dt>
-          <dd>La Borbolla Editorial</dd>
-        </div>
-        <div>
-          <dt>Established</dt>
-          <dd>For readers of old books in new hands</dd>
-        </div>
-        <div>
-          <dt>Catalog</dt>
-          <dd><a href="catalog.html">The Innocence of Father Brown</a>, <a href="catalog.html">Sonnets</a>, and forthcoming titles</dd>
-        </div>
-        <div>
-          <dt>Typography</dt>
-          <dd>Cormorant Garamond and IM Fell English</dd>
-        </div>
-        <div>
-          <dt>Materials</dt>
-          <dd>Warm paper, red ink, generous margins, and patient setting</dd>
-        </div>
-      </dl>
-      -->
+      <section class="now-in-print" aria-labelledby="shelf-title">
+        <h2 id="shelf-title">Now in print</h2>
+<!-- BUILD:shelf -->
+    <ul class="shelf">
+      <li><a href="catalog.html#the-innocence-of-father-brown"><img class="book-cover" src="assets/covers/innocence-father-brown.jpg" alt="Cover of The Innocence of Father Brown" width="324" height="500" loading="lazy"><span class="visually-hidden">The Innocence of Father Brown</span></a></li>
+      <li><a href="catalog.html#the-wisdom-of-father-brown"><img class="book-cover" src="assets/covers/wisdom-father-brown.jpg" alt="Cover of The Wisdom of Father Brown" width="324" height="500" loading="lazy"><span class="visually-hidden">The Wisdom of Father Brown</span></a></li>
+      <li><a href="catalog.html#sonnets"><img class="book-cover" src="assets/covers/sonnets.jpg" alt="Cover of Sonnets" width="324" height="500" loading="lazy"><span class="visually-hidden">Sonnets</span></a></li>
+    </ul>
+<!-- /BUILD:shelf -->
+      </section>
 
       <nav class="actions" aria-label="Site links">
         <a href="catalog.html">View catalog</a>
-        <a href="mailto:sir.jpiglesias@gmail.com">Write to Us</a>
+        <a href="mailto:sir.jpiglesias@gmail.com">Write to us</a>
       </nav>
 
       <footer>
@@ -63,5 +58,18 @@
       </footer>
     </section>
   </main>
+<!-- BUILD:jsonld -->
+  <script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "La Borbolla Editorial",
+    "url": "https://la-borbolla-editorial.github.io/lbe-site/",
+    "logo": "https://la-borbolla-editorial.github.io/lbe-site/assets/mark.png"
+  }
+]
+  </script>
+<!-- /BUILD:jsonld -->
 </body>
 </html>

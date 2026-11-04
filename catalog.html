@@ -3,11 +3,19 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>La Borbolla Editorial — Catalog</title>
-  <meta name="description" content="Catalog of books from La Borbolla Editorial.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
+  <title>Catalog — La Borbolla Editorial</title>
+  <meta name="description" content="Books in print and in preparation from La Borbolla Editorial: classic fiction and poetry in carefully typeset editions.">
+  <meta name="theme-color" content="#efe2d5">
+  <link rel="canonical" href="https://la-borbolla-editorial.github.io/lbe-site/catalog.html">
+  <link rel="icon" type="image/png" href="assets/mark.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="La Borbolla Editorial">
+  <meta property="og:title" content="Catalog — La Borbolla Editorial">
+  <meta property="og:description" content="Books in print and in preparation from La Borbolla Editorial: classic fiction and poetry in carefully typeset editions.">
+  <meta property="og:url" content="https://la-borbolla-editorial.github.io/lbe-site/catalog.html">
+  <meta property="og:image" content="https://la-borbolla-editorial.github.io/lbe-site/assets/mark.png">
+  <meta name="twitter:card" content="summary">
+  <link rel="preload" href="assets/fonts/CormorantGaramond-normal-400-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="styles.css">
   <script src="catalog.js" defer></script>
 </head>
@@ -23,16 +31,54 @@
       <div class="rule" aria-hidden="true"></div>
 
       <section id="catalog-list" class="book-list" aria-label="Books">
-        <p class="catalog-loading">Loading catalog…</p>
-        <noscript>
-          <p class="catalog-loading">Enable JavaScript to render the catalog.</p>
-        </noscript>
+<!-- BUILD:list -->
+      <article id="the-innocence-of-father-brown" class="book-entry" data-categories="Classic fiction">
+        <img class="book-cover" src="assets/covers/innocence-father-brown.jpg" alt="Cover of The Innocence of Father Brown" width="324" height="500" loading="lazy">
+        <div class="book-copy">
+          <p class="book-kicker">Classic fiction</p>
+          <h2>The Innocence of Father Brown</h2>
+          <p class="book-authors">G. K. Chesterton</p>
+          <p class="book-contributors">Foreword by R. H. Naranjo</p>
+          <p class="book-blurb">Twelve detective stories in which a small, unassuming priest solves crimes by understanding the people behind them.</p>
+          <a class="book-buy" href="https://www.amazon.com/dp/B0H1HYPTSS" target="_blank" rel="noopener noreferrer">Buy <span class="visually-hidden">The Innocence of Father Brown </span>on Amazon <span aria-hidden="true">↗</span></a>
+        </div>
+      </article>
+      <article id="the-wisdom-of-father-brown" class="book-entry" data-categories="Classic fiction">
+        <img class="book-cover" src="assets/covers/wisdom-father-brown.jpg" alt="Cover of The Wisdom of Father Brown" width="324" height="500" loading="lazy">
+        <div class="book-copy">
+          <p class="book-kicker">Classic fiction</p>
+          <h2>The Wisdom of Father Brown</h2>
+          <p class="book-authors">G. K. Chesterton</p>
+          <p class="book-contributors">With an essay by R. H. Naranjo</p>
+          <p class="book-blurb">Twelve more cases for Father Brown, where the paradox is as sharp as the mystery.</p>
+          <a class="book-buy" href="https://www.amazon.com/dp/B0HQ1B64QD" target="_blank" rel="noopener noreferrer">Buy <span class="visually-hidden">The Wisdom of Father Brown </span>on Amazon <span aria-hidden="true">↗</span></a>
+        </div>
+      </article>
+      <article id="sonnets" class="book-entry" data-categories="Poetry">
+        <img class="book-cover" src="assets/covers/sonnets.jpg" alt="Cover of Sonnets" width="324" height="500" loading="lazy">
+        <div class="book-copy">
+          <p class="book-kicker">Poetry</p>
+          <h2>Sonnets</h2>
+          <p class="book-authors">William Shakespeare</p>
+          <p class="book-contributors">Edited and typeset by La Borbolla Editorial</p>
+          <p class="book-blurb">Shakespeare&#x27;s sonnets in a plainly set edition made for slow, repeated reading.</p>
+          <a class="book-buy" href="https://www.amazon.com/dp/B0H5TV4VX3" target="_blank" rel="noopener noreferrer">Buy <span class="visually-hidden">Sonnets </span>on Amazon <span aria-hidden="true">↗</span></a>
+        </div>
+      </article>
+<!-- /BUILD:list -->
       </section>
 
-      <section class="catalog-tags" aria-labelledby="catalog-tags-title">
-        <h2 id="catalog-tags-title">Sort by tag</h2>
-        <div id="category-tags" class="tag-list" aria-label="Catalog category filters"></div>
+<!-- BUILD:filters -->
+      <section class="catalog-tags" aria-labelledby="catalog-tags-title" hidden>
+        <h2 id="catalog-tags-title">Filter by category</h2>
+        <div id="category-tags" class="tag-list">
+          <button type="button" class="tag-button active" data-category="all" aria-pressed="true">All (3)</button>
+          <button type="button" class="tag-button" data-category="Classic fiction" aria-pressed="false">Classic fiction (2)</button>
+          <button type="button" class="tag-button" data-category="Poetry" aria-pressed="false">Poetry (1)</button>
+        </div>
+        <p id="filter-status" class="visually-hidden" role="status" aria-live="polite"></p>
       </section>
+<!-- /BUILD:filters -->
 
       <nav class="actions" aria-label="Site links">
         <a href="index.html">Back to colophon</a>
@@ -44,5 +90,66 @@
       </footer>
     </section>
   </main>
+<!-- BUILD:jsonld -->
+  <script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "La Borbolla Editorial",
+    "url": "https://la-borbolla-editorial.github.io/lbe-site/",
+    "logo": "https://la-borbolla-editorial.github.io/lbe-site/assets/mark.png"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Book",
+    "name": "The Innocence of Father Brown",
+    "author": {
+      "@type": "Person",
+      "name": "G. K. Chesterton"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "La Borbolla Editorial"
+    },
+    "image": "https://la-borbolla-editorial.github.io/lbe-site/assets/covers/innocence-father-brown.jpg",
+    "description": "Twelve detective stories in which a small, unassuming priest solves crimes by understanding the people behind them.",
+    "url": "https://www.amazon.com/dp/B0H1HYPTSS"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Book",
+    "name": "The Wisdom of Father Brown",
+    "author": {
+      "@type": "Person",
+      "name": "G. K. Chesterton"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "La Borbolla Editorial"
+    },
+    "image": "https://la-borbolla-editorial.github.io/lbe-site/assets/covers/wisdom-father-brown.jpg",
+    "description": "Twelve more cases for Father Brown, where the paradox is as sharp as the mystery.",
+    "url": "https://www.amazon.com/dp/B0HQ1B64QD"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Book",
+    "name": "Sonnets",
+    "author": {
+      "@type": "Person",
+      "name": "William Shakespeare"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "La Borbolla Editorial"
+    },
+    "image": "https://la-borbolla-editorial.github.io/lbe-site/assets/covers/sonnets.jpg",
+    "description": "Shakespeare's sonnets in a plainly set edition made for slow, repeated reading.",
+    "url": "https://www.amazon.com/dp/B0H5TV4VX3"
+  }
+]
+  </script>
+<!-- /BUILD:jsonld -->
 </body>
 </html>
