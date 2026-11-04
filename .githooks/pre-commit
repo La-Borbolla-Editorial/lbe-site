@@ -1,0 +1,5 @@
+#!/bin/sh
+# Regenerate the static catalog from catalog.csv and include it in the commit.
+cd "$(git rev-parse --show-toplevel)" || exit 1
+python3 build.py || { echo "pre-commit: build.py failed" >&2; exit 1; }
+git add index.html catalog.html sitemap.xml
