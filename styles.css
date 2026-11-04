@@ -471,7 +471,7 @@ footer p {
 }
 
 .shelf li {
-  width: clamp(84px, 20vw, 118px);
+  width: clamp(84px, 26vw, 190px);
 }
 
 .shelf .book-cover {
