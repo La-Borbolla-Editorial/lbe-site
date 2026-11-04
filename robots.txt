@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://la-borbolla-editorial.github.io/lbe-site/sitemap.xml
+Sitemap: https://laborbollaeditorial.com/sitemap.xml

@@ -21,7 +21,7 @@ A small static colophon-style site. The catalog is pre-rendered from `catalog.cs
 
 After a fresh clone, enable the hook once with `git config core.hooksPath .githooks`.
 
-The category filter appears automatically once the catalog has 8 titles (`FILTER_MIN_BOOKS` in `build.py`). If the site moves to a custom domain, update `SITE_URL` in `build.py` and the canonical/OG URLs in the page heads.
+The category filter appears automatically once the catalog has 8 titles (`FILTER_MIN_BOOKS` in `build.py`). If the domain changes, update `SITE_URL` in `build.py` and the canonical/OG URLs in the page heads (currently `https://laborbollaeditorial.com/`).
 
 ## Preview
 

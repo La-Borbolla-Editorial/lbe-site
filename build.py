@@ -10,7 +10,7 @@ import re
 from pathlib import Path
 
 ROOT = Path(__file__).parent
-SITE_URL = "https://la-borbolla-editorial.github.io/lbe-site/"
+SITE_URL = "https://laborbollaeditorial.com/"
 FILTER_MIN_BOOKS = 8  # category filter stays hidden below this many titles
 E = html.escape
 
